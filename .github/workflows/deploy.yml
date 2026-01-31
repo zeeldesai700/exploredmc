@@ -1,4 +1,4 @@
-name: Deploy exploredmc to Hostinger
+name: Deploy exploredmc to Hostinger via SFTP
 
 on:
   push:
@@ -13,13 +13,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: FTP Deploy to Hostinger (exploredmc only)
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Deploy exploredmc to Hostinger via SFTP
+      uses: appleboy/scp-action@v0.1.7
       with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: ${{ secrets.FTP_PORT }}
-        server-dir: /domains/exploredmc.harekrishnamobile.in/zeeltest/
-        local-dir: ./
-        dangerous-clean-slate: false
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: ${{ secrets.SSH_PORT }}
+        source: "."
+        target: "/home/${{ secrets.SSH_USERNAME }}/domains/exploredmc.harekrishnamobile.in/zeeltest/
+        
