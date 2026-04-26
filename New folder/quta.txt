@@ -1,0 +1,35 @@
+now i want create qutation page as per belwo details create page
+
+*Hedar Part
+qutation no : set like QTN-20250816-0005
+customer name: fatch from customers table 
+qutation date: defult today and select from calander
+Contory: list fatch from countries
+travel date: select from calander
+Select person & Rooms : open box add adult & child & No bed child & rooms
+traveling days: open box add night & day like 7-days 6-night
+Departure date: calculate from travel date to traveling days auto set this date
+Transport: list fatch from cars table car_name aslo show seater with car name
+
+*Hotel Part
+select city name: fatch city name as per contory select in header part
+select Hotel Category: fatch catagory from hotels table
+select Hotel Name: show list of hotel witch i select city & catagory  
+select Hotel Room Categories: show list hotel rooms as per select hotel
+period of stay : select night of stay but not more then select in traveling days
+Price: Calculate price of total like if in header part have 5 adult & 1 child & 1 child no bed select and 2 rooms select then 1 is extra adult
+so calculat price is Room Categories price+is hotel extra adult price + extra child charge + extra no bed child charge = Hotel cost
+
+add one more part in this page column wies set 
+*traviling part
+open box as per traveling day enter day like if enter 7 days then open 7 box open
+*date : auto set date in box start with travel date and last date is departur date
+*select City: fatch city name as per Contory select on hedar part
+*pickup time: open clock select time 
+*pickup point: fatch from pickup_point table show pick up point as per city wies
+*sighseen : fatch as per select city 
+*activity: fatch as per select sightseen from sightseen_activity table 
+*activity price : Sum of price as per activity * total person (as per header mention adult+child)
+*car rent: as per select sighseen fatch rent ( half_day_rent or full_day_rent) 
+*meal: fatch list of catoagory as per select city from meals table
+*meal Price : as per select meal catogory fatch price*total person from meals table * 
